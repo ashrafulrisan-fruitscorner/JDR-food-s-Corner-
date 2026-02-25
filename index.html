@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JDR Fruits & Foods Corner | Fresh & Healthy</title>
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #27ae60; /* ফ্রুটস থিমের জন্য সবুজ রঙ */
+            --secondary-color: #2ecc71;
+            --accent-color: #f1c40f;
+            --dark-color: #2c3e50;
+            --light-color: #f9f9f9;
+            --white: #ffffff;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { background-color: var(--white); color: #333; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* Header */
+        header { background: var(--white); box-shadow: var(--shadow); position: fixed; width: 100%; top: 0; z-index: 1000; }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary-color); }
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav a { text-decoration: none; color: var(--dark-color); font-weight: 500; transition: var(--transition); }
+        nav a:hover { color: var(--primary-color); }
+
+        /* Hero Section */
+        .hero { 
+            height: 80vh; 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1610832958506-aa56368176cf?q=80&w=2070') center/cover;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white; margin-top: 60px;
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .btn { padding: 12px 30px; background: var(--primary-color); color: white; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; font-size: 1.1rem; }
+
+        /* Products/Menu */
+        .menu { padding: 80px 0; }
+        .section-title { text-align: center; margin-bottom: 40px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: var(--light-color); border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); transition: var(--transition); }
+        .card:hover { transform: translateY(-10px); }
+        .card-img { height: 200px; background-size: cover; background-position: center; }
+        .card-content { padding: 20px; }
+        .price { color: var(--primary-color); font-weight: bold; font-size: 1.2rem; }
+
+        /* Footer */
+        footer { background: var(--dark-color); color: white; padding: 40px 0; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">🍎 JDR Foods</div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Fruits</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div>
+            <h1>স্বাগতম আশরাফ!</h1>
+            <p>আমাদের এখানে পাবেন একদম ফ্রেশ এবং ফরমালিন মুক্ত ফল।</p><br>
+            <a href="#menu" class="btn">অর্ডার করুন</a>
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-title">
+                <h2>আমাদের স্পেশাল ফ্রুটস</h2>
+                <p>সেরা বাগান থেকে সরাসরি সংগৃহীত</p>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1560806887-1e4cd0b6bcd6?w=500');"></div>
+                    <div class="card-content">
+                        <h3>তাজা আপেল</h3>
+                        <p>মিষ্টি এবং রসালো লাল আপেল।</p>
+                        <p class="price">৳ ২২০ / কেজি</p>
+                        <button class="btn" style="width: 100%; margin-top: 10px;">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1557800636-894a64c1696f?w=500');"></div>
+                    <div class="card-content">
+                        <h3>মিষ্টি কমলা</h3>
+                        <p>ভিটামিন-সি সমৃদ্ধ ফ্রেশ কমলা।</p>
+                        <p class="price">৳ ১৮০ / কেজি</p>
+                        <button class="btn" style="width: 100%; margin-top: 10px;">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1528825871115-3581a5387919?w=500');"></div>
+                    <div class="card-content">
+                        <h3>পাকা কলা</h3>
+                        <p>একদম প্রাকৃতিক উপায়ে পাকানো।</p>
+                        <p class="price">৳ ৮০ / ডজন</p>
+                        <button class="btn" style="width: 100%; margin-top: 10px;">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 JDR Foods Corner | Developed by আশরাফ</p>
+    </footer>
+
+</body>
+</html>
